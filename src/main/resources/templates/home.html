@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>T-Mobile Demo</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>T-Mobile Demo App</h1>
+        <p th:text="'Click on any of the Tests below to test!'"></p>
+    </div>>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Add 10 Form!</h3>
+                <div>
+                    <label for="add10In" class="col-sm-4 col-form-label">Input Number</label><input id="add10In" type="number" class="form-control"/>
+                    <button type="button" class="btn btn-info" onclick="doAdd10Form()">Submit</button>
+                    <hr/>
+                    <div class="text-center">
+                        <label for="add10Result" class="col-sm-4 col-form-label">Add 10: </label>
+                        <div class="col-sm-4">
+                            <input id="add10Result" type="text" class="disabled">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>Add Two Numbers Form!</h3>
+                <label for="addNum1" class="col-sm-4 col-form-label">Input Number</label><input id="addNum1" type="number" class="form-control"/>
+                <label for="addNum2" class="col-sm-4 col-form-label">Input Number</label><input id="addNum2" type="number" class="form-control"/>
+                <button type="button" class="btn btn-info" onclick="doAddOpForm()">Submit</button>
+                <hr/>
+                <div class="text-center">
+                    <label for="addOpResult" class="col-sm-4 col-form-label">Add Nums: </label>
+                    <div class="col-sm-4">
+                        <input id="addOpResult" type="text" class="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>Counter</h3>
+                <button type="button" class="btn btn-info" onclick="doCounter()">Submit</button>
+                <hr/>
+                <div class="text-center">
+                    <label for="counterResult" class="col-sm-4 col-form-label">Count: </label>
+                    <div class="col-sm-4">
+                        <input id="counterResult" type="text" class="disabled">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- /.container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>
